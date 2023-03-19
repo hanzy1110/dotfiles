@@ -1,0 +1,55 @@
+layout {
+    tab_template name="ranger-on-the-side" {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+        pane split_direction="vertical" {
+            pane size="10%" {
+				plugin location="zellij:strider"
+			}
+            children
+        }
+    }
+
+    ranger-on-the-side name="RTOTallerNQN" split_direction="vertical"  cwd="/home/bm69/git/rtounc_tallernqn_v2.0" {
+		pane command="hx" {
+			args "."
+		}
+    }
+    ranger-on-the-side name="RTOUtils" split_direction="vertical"  cwd="/home/bm69/git/rto_utils/projects" {
+		pane command="hx" {
+			args "."
+		}
+    }
+    ranger-on-the-side name="TURNERO RN" split_direction="vertical"  cwd="/home/bm69/git/rtounc_turnosrn" {
+		pane command="hx" {
+			args "."
+		}
+    }
+
+	tab name="LazyGit" {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+
+		pane split_direction="vertical" {
+			pane command="lazygit" start_suspended=true cwd="/home/bm69/git/rto_utils/projects"
+			pane command="lazygit" start_suspended=true cwd="/home/bm69/git/rtounc_tallernqn_v2.0"
+			pane command="lazygit" start_suspended=true cwd="/home/bm69/git/rtounc_turnosrn"
+		}
+	}
+    tab name="PREPROD_SVR" {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+		pane  split_direction="vertical"{
+			pane command="kitty" start_suspended=true {
+	            args "+kitten" "ssh" "lenovoSVR"
+	        }
+	        pane command="kitty" start_suspended=true {
+	            args "+kitten" "ssh" "lenovoSVR"
+	        }
+		}
+    }
+}
+

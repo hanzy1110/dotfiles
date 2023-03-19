@@ -1,0 +1,23 @@
+layout {
+
+	pane_template name = "editor" {
+		plugin location="zellij:tab-bar"
+		command = "hx"
+		args = "."
+	}
+
+	pane_template name = "ssh" command = "ssh" {plugin location = "zellij:tab-bar"}
+	pane_template name = "git_commit" command = "git commit -am && git push"	
+
+	tab name = "RTO UTILS" split_direction = "vertical"{
+
+		cwd = "/home/bm69/git/rto_utils/projects"
+		editor
+		pane {
+			ssh args = "lenovoSvr"
+			git_commit
+		}
+
+		}
+	}
+

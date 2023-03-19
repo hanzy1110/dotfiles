@@ -1,0 +1,25 @@
+layout {
+    tab_template name="ranger-on-the-side" {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+        pane split_direction="vertical" {
+            pane size="15%" {
+				plugin location="zellij:strider"
+			}
+            children
+        }
+    }
+    ranger-on-the-side name="Editor" split_direction="vertical"  cwd="/home/bm69/git/crm/backend" {
+		pane command="hx" {
+			args "."
+		}
+        pane size="35%" {
+			pane command="bash" start_suspended=true {
+				args "./build.sh"
+			}
+			pane command="ssh" args="crm_api" start_suspended=true
+		}
+    }
+}
+

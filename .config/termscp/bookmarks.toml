@@ -1,0 +1,30 @@
+[bookmarks]
+
+[recents.ISO20230224T142652]
+protocol = "SFTP"
+address = "lenovoSVR"
+port = 22
+username = "eureadmin"
+
+[recents.ISO20230224T114941]
+protocol = "SFTP"
+address = "jc1791194.ferozo.com"
+port = 21
+username = "c1791194"
+
+[recents.ISO20230224T115041]
+protocol = "FTP"
+address = "c1791194.ferozo.com"
+port = 21
+username = "c1791194"
+
+[recents.ISO20230227T090225]
+protocol = "SCP"
+address = "lenovoSVR"
+port = 22
+username = "eureadmin"
+
+[recents.ISO20230224T142622]
+protocol = "SCP"
+address = "lenovoSVR"
+port = 22

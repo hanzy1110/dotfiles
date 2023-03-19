@@ -1,0 +1,11 @@
+#[[language]]
+# name = "rust"
+# language-server = { command = "rustup", args = ["run", "stable", "rust-analyzer"] }
+[[language]]
+  name = "toml"
+  language-server = { command = "taplo", args = ["lsp", "stdio"]}
+# [[language]]
+#   name = "python"
+#   # roots = ["pyproject.toml"]
+#   language-server = { command = "pyright-langserver", args = ["--stdio"] }
+#   config = {} # <- this is the important line
